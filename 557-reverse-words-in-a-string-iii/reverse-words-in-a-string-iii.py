@@ -4,9 +4,7 @@ class Solution(object):
         ans=''
         for i in range(len(s1)):
             ans+=(s1[i][::-1])
-            if len(s1)-1==i:
-                ans+=""
-            else:
-                ans+=' '
+            if len(s1)-1!=i:
+                ans+=" "
         return(ans)
                 
