@@ -1,11 +1,7 @@
 class Solution(object):
     def isBalanced(self, num):
-        odd=[]
-        evn=[]
-        for i in range(len(num)):
-            if i%2==0:
-                odd.append(int(num[i]))
-            else:
-                evn.append(int(num[i]))
-        return (sum(evn)==sum(odd))
+        return (
+            sum(int(num[i]) for i in range(0, len(num), 2)) ==
+            sum(int(num[i]) for i in range(1, len(num), 2))
+        )
 
