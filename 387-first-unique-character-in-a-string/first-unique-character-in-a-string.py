@@ -1,14 +1,10 @@
 class Solution(object):
     def firstUniqChar(self, s):
-        d={}
-        for i in s:
-            if i in d:
-                d[i]+=1
-            else:
-                d[i]=1
-        for i in s:
-            if d[i] == 1:
-                return (s.index(i))
-                break
-        return(-1)
+        freq={}
+        for ch in s:
+            freq[ch]=freq.get(ch,0)+1
+        for i in range(len(s)):
+            if freq[s[i]]==1:
+                return i
+        return -1
         
