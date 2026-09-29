@@ -4,7 +4,7 @@ class Solution(object):
         for i in arr:
             freq[i]=freq.get(i,0)+1
         val=[]
-        for i,ele in freq.items():
+        for ele in freq.values():
             if ele in val:
                 return False
             val.append(ele)
