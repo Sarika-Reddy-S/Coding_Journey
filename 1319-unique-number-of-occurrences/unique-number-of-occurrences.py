@@ -3,9 +3,9 @@ class Solution(object):
         freq={}
         for i in arr:
             freq[i]=freq.get(i,0)+1
-        val=[]
+        val=set()
         for ele in freq.values():
             if ele in val:
                 return False
-            val.append(ele)
+            val.add(ele)
         return True
