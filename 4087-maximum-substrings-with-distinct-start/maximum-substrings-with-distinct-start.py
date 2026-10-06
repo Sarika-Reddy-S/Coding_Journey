@@ -3,4 +3,4 @@ class Solution:
         result={}
         for i in s:
             result[i]=result.get(i,0)+1
-        return len(result)
+        return len(result.keys())
