@@ -1,11 +1,9 @@
 class Solution(object):
     def maxProfit(self, prices):
-        mins=float('inf')
-        maxs=0
-        for i in range(len(prices)):
-            if prices[i] < mins:
-                mins=prices[i]
-            else:
-                maxs=max(prices[i]-mins,maxs)
-        return (maxs)
-        
+        min_price = float('inf')
+        max_profit = 0
+        for price in prices:
+            min_price = min(min_price, price)
+            profit = price - min_price
+            max_profit = max(max_profit, profit)
+        return max_profit
